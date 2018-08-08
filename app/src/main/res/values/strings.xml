@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Music Player</string>
+    <string name="now_playing_activity_label">Now Playing</string>
+    <string name="zero_duration">0:00</string>
+
+</resources>

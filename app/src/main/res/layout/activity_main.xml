@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.musicplayer.MainActivity">
+
+    <include
+        android:id="@+id/main_songs_list"
+        layout="@layout/songs_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5" />
+
+    <RelativeLayout
+        android:id="@+id/main_lower_bar"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@android:color/darker_gray"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/main_song_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:text="Song Name" />
+
+        <TextView
+            android:id="@+id/main_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_song_name"
+            android:layout_marginTop="8dp"
+            android:text="Artist Name" />
+
+        <ImageButton
+            android:id="@+id/main_play_button"
+            android:layout_width="84dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/main_next_button"
+            android:background="@null"
+            android:src="@drawable/ic_play_circle_outline_white_64dp" />
+
+        <ImageButton
+            android:id="@+id/main_next_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:src="@drawable/ic_skip_next_white_48dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

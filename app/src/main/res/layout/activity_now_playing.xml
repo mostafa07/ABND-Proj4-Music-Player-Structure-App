@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.android.musicplayer.NowPlaying">
+
+    <ImageView
+        android:id="@+id/now_playing_song_image"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="8"
+        android:src="@drawable/music" />
+
+    <TextView
+        android:id="@+id/now_playing_song_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        tools:text="Song Name" />
+
+    <TextView
+        android:id="@+id/now_playing_artist_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|top"
+        tools:text="Artist Name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_dimen">
+
+        <TextView
+            android:id="@+id/now_playing_current_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/zero_duration" />
+
+        <SeekBar
+            android:id="@+id/now_playing_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_dimen" />
+
+        <TextView
+            android:id="@+id/now_playing_total_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_height">
+
+        <ImageButton
+            android:id="@+id/now_playing_shuffle_button"
+            android:layout_width="@dimen/button_small_dimen"
+            android:layout_height="@dimen/button_small_dimen"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/now_playing_prev_button"
+            android:background="@null"
+            android:src="@drawable/ic_shuffle_black_48dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_prev_button"
+            android:layout_width="@dimen/button_dimen"
+            android:layout_height="@dimen/button_dimen"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@id/now_playing_play_button"
+            android:background="@null"
+            android:src="@drawable/ic_skip_previous_black_48dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_play_button"
+            android:layout_width="@dimen/list_height"
+            android:layout_height="@dimen/list_height"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:src="@drawable/ic_play_arrow_black_84dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_next_button"
+            android:layout_width="@dimen/button_dimen"
+            android:layout_height="@dimen/button_dimen"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@id/now_playing_play_button"
+            android:background="@null"
+            android:src="@drawable/ic_skip_next_black_48dp" />
+
+        <ImageButton
+            android:id="@+id/now_playing_share_button"
+            android:layout_width="@dimen/button_small_dimen"
+            android:layout_height="@dimen/button_small_dimen"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/now_playing_next_button"
+            android:background="@null"
+            android:src="@drawable/ic_share_black_48dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
